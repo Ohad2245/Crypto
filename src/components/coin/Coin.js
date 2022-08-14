@@ -12,7 +12,7 @@ function Coin({ name, icon, price, symbol, volume, priceChange }) {
           <p className="coin-symbol">{symbol}</p>
         </div>
         <div className="coin-data">
-          <p className="coin-price">{price}$</p>
+          <p className="coin-price">{price.toLocaleString()}$</p>
           <p className='coin-volume'>${volume.toLocaleString()}</p>
 
           {priceChange < 0 ? (

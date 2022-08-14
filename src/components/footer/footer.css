@@ -1,0 +1,45 @@
+.footer{
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.footer__socials{
+    display:flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer__socials a{
+    color:DodgerBlue;
+    padding:1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    border:1px solid transparent;
+}
+
+.footer__socials a:hover{
+    background: transparent;
+    color:white;
+    border-color:'blue';
+}
+
+.footer__copyright{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width:600px) { 
+    .permalinks{
+        flex-direction: column;
+        gap:1.5rem;
+    }
+
+    .footer__socials{
+        margin-bottom: 2.6rem;
+    }
+}
