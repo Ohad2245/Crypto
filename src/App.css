@@ -57,7 +57,7 @@
 }
 
 
- @media screen and (max-width:1024px) {
+ /* @media screen and (max-width:1024px) {
     .cryptoHeader{
         width:10%;
         margin-top:1rem;
@@ -73,5 +73,5 @@
     /* section > h2{
         margin-bottom:2rem;
     } */
-} 
+/* }   */
 
