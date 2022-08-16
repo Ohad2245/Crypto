@@ -5,7 +5,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import { auth } from "C:/Users/PC/Desktop/CryptoApp/my-app/src/firebase-config.js";
+import { auth } from '../../firebase-config';
 
 function Register() {
   const [registerEmail, setRegisterEmail] = useState("");
