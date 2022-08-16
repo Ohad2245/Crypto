@@ -4,7 +4,7 @@ import Axios from "axios";
 import Coin from "../components/coin/Coin";
 import "../App.css";
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from '../redux/counter/coinsSlice';
+import { increment } from '../redux/coins/coinsSlice';
 
 function Home({priceChange}) {
   const [listCoins, setListCoins] = useState([]);
@@ -36,14 +36,7 @@ function Home({priceChange}) {
           Increment
         </button>
         <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
       </div>
-
 
       <h1>Crypto Hunter</h1>
       <small className="p">Get All The Info Regarding Your Favorite crypto Currency </small>
