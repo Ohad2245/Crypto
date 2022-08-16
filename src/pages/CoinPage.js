@@ -5,7 +5,7 @@ import "../App.css";
 
 function CoinPage({priceChange}) {
   const [listCoins, setListCoins] = useState([]);
-  const [searchCoin, setSearchCoin] = useState("");
+  const [searchCoin] = useState("");
 
   
 
