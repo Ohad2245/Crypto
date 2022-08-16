@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 // import bg from '../assets/footer-bg.jpg';
 // import bg from '../assets/footer2.png';
@@ -5,7 +6,7 @@ import "./footer.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-// import bg from '../../assets/footer.jpg';
+import bg2 from '../../assets/one.svg';
 
 function Footer() {
   return (
@@ -22,8 +23,11 @@ function Footer() {
           <BsLinkedin />
         </a>
       </div>
+      <a className="oneBi" href="https://www.one1.co.il/services/bi/" target="_blank" rel="noreferrer">
+        <img src={bg2} width="100"/>
+      </a>
       <div className="footer__copyright">
-        <small>&copy; All Rights Reserved.</small>
+        <small>&copy; All Rights Reserved by <img src={bg2} width="55"/></small>
       </div>
     </div>
   );

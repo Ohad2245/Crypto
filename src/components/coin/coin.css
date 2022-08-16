@@ -67,7 +67,9 @@
   color: #11d811;
 }
 
-
+.btn2{
+  font-weight:700;
+}
 
 @media screen and (max-width:600px) { 
     .coin-row{
