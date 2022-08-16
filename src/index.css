@@ -12,6 +12,24 @@ code {
     monospace;
 }
 
+:root{
+  --color-bg: #1f1f38;
+  --color-bg-variant:#2c2c6c;
+  --color-bg-primary:#4db5ff;
+  --color-bg-primary-variant:rgba(77,181,255,0.4);
+  --color-white:#fff;
+  --color-light:rgba(255,255,255,0.6);
+
+  --color: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+
+  --transition: all 400ms ease;
+
+  --container-width-lg:75%;
+  --container-width-md:86%;
+  --container-width-sm:90%;
+}
+
 
 
 

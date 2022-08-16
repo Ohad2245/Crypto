@@ -6,11 +6,11 @@ import "../App.css";
 import { useSelector, useDispatch } from 'react-redux';
 import { increment } from '../redux/coins/coinsSlice';
 
-function Home({priceChange}) {
+function Home() {
   const [listCoins, setListCoins] = useState([]);
   const [searchCoin, setSearchCoin] = useState("");
 
-  const count = useSelector(state => state.counter.value)
+  const coins = useSelector(state => state.coins.value)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -35,7 +35,11 @@ function Home({priceChange}) {
         >
           Increment
         </button>
-        <span>{count}</span>
+        <span>{coins}</span>
+      </div>
+
+      <div>
+
       </div>
 
       <h1>Crypto Hunter</h1>
@@ -44,12 +48,6 @@ function Home({priceChange}) {
         <h1>Search Coins</h1>
 
         <div className="greenPercent">
-        {priceChange > 0 ? (
-          <h1 className="coin-percent green">{priceChange.toFixed(2)}%</h1>
-        ) : (
-          <p>{priceChange}</p>
-        )}
-
       </div>
         <input
           className="search"
@@ -74,6 +72,7 @@ function Home({priceChange}) {
             />
           );
         })}
+
         </div>
       </div>
   );

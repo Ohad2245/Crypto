@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const coinsSlice = createSlice({
-  name: 'counter',
+  name: 'Coins',
   initialState: {
     value: 0
   },
   reducers: {
-    increment: state => {
+    incrementByAmount: state => {
       state.value += 1
     },
   }

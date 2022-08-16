@@ -1,7 +1,7 @@
 *{
     color: #fff;
     font-weight:100;
-    background-color: #000000;
+    background-color: #1e3548;
 }
 
 .coin-container{
@@ -39,6 +39,8 @@
 
 .coin-symbol{
     width:3px;
+    color:#d7d7d7;
+    font-weight: 500;
 }
 
 .cryptoHeader{
