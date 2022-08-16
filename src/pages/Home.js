@@ -3,10 +3,15 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import Coin from "../components/coin/Coin";
 import "../App.css";
+import { useSelector, useDispatch } from 'react-redux';
+import { decrement, increment } from '../redux/counter/coinsSlice';
 
 function Home({priceChange}) {
   const [listCoins, setListCoins] = useState([]);
   const [searchCoin, setSearchCoin] = useState("");
+
+  const count = useSelector(state => state.counter.value)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     Axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=10").then(
@@ -23,6 +28,23 @@ function Home({priceChange}) {
 
   return (
     <div className="App">
+    <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <span>{count}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
+      </div>
+
+
       <h1>Crypto Hunter</h1>
       <small className="p">Get All The Info Regarding Your Favorite crypto Currency </small>
       <div className="cryptoHeader">
