@@ -10,7 +10,6 @@ import bg from '../../assets/footer.jpg';
 function Footer() {
   return (
     <div className="footer" style={{backgroundImage: `url(${bg})`}} >
-    {/* */}
     <div className="footer__socials">
         <a href="https://www.facebook.com/profile.php?id=100000848391807" target="_blank" rel="noreferrer"
         >

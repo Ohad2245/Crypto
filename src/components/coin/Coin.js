@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import './coin.css';
+import "./coin.css";
 
 function Coin({ name, icon, price, symbol, volume, priceChange }) {
   return (
@@ -13,7 +13,7 @@ function Coin({ name, icon, price, symbol, volume, priceChange }) {
         </div>
         <div className="coin-data">
           <p className="coin-price">{price.toLocaleString()}$</p>
-          <p className='coin-volume'>${volume.toLocaleString()}</p>
+          <p className="coin-volume">${volume.toLocaleString()}</p>
 
           {priceChange < 0 ? (
             <p className="coin-percent red">{priceChange.toFixed(2)}%</p>

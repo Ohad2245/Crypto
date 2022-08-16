@@ -9,7 +9,7 @@ const NavBar = () => {
           Home
         </Link>
         <ul>
-        <CustomLink to="/pricing">Pricing</CustomLink>
+        <CustomLink to="/coinPage">CoinPage</CustomLink>
         <CustomLink to="/about">About</CustomLink>
         </ul>
       </nav>

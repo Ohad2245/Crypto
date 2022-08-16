@@ -1,9 +1,9 @@
 .footer{
     position: relative;
+    padding: 6rem 2rem;
     background-position: top;
+    background-size: cover;
     background-repeat: no-repeat;
-    text-align: center;
-    margin-top: 7rem;
 }
 
 .footer__socials{
@@ -11,6 +11,7 @@
     justify-content: center;
     gap: 1rem;
     margin-bottom: 4rem;
+    background-color:transparent;
 }
 
 .footer__socials a{
@@ -18,24 +19,23 @@
     padding:1rem;
     border-radius: 0.5rem;
     display: flex;
-    border:1px solid transparent;
+    
 }
 
 .footer__socials a:hover{
-    background: transparent;
-    color:white;
     border-color:'blue';
 }
 
 .footer__copyright{
     margin-bottom: 2rem;
     text-align: center;
+    background:none;
+
 }
 
 
 @media screen and (max-width:600px) { 
-    .permalinks{
-        flex-direction: column;
+    .footer{
         gap:1.5rem;
     }
 
