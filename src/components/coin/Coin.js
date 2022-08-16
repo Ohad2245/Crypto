@@ -2,12 +2,12 @@
 import React from "react";
 import "./coin.css";
 
-function Coin({ name, icon, price, symbol, volume, priceChange }) {
+function Coin({ name, icon, price, symbol, volume, priceChange , websiteUrl}) {
   return (
     <div className="coin-container">
       <div className="coin-row">
         <div className="coin">
-          <img src={icon} alt="crypto" />
+          <img className="image" src={icon} alt="crypto" />
           <h1>{name}</h1>
           <p className="coin-symbol">{symbol}</p>
         </div>
@@ -20,10 +20,15 @@ function Coin({ name, icon, price, symbol, volume, priceChange }) {
           ) : (
             <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
           )}
-         
+          
+          <a href={websiteUrl} onClick={websiteUrl}>
+            Trade    
+          </a>
+          
         </div>
       </div>
     </div>
+  
   );
 }
 

@@ -53,9 +53,8 @@
     justify-content: center;
     width: 50%;
     height:2.1rem;
-    margin-top:80px;
     align-items: center;
-    border: solid 2px white;
+    border: solid 2px gray;
     border-radius:10px;
     font-size: 1.3rem;
     padding-left: 5px;
@@ -65,10 +64,12 @@
 
  @media screen and (max-width:1024px) {
     .cryptoHeader{
-        width:10%;
+        width:100%;
         margin-top:1rem;
-
     }
+    .search{
+        width:100%;
+    } 
 }
 
 @media screen and (max-width:600px) {
@@ -77,7 +78,7 @@
         flex-direction:column;
     }
     .search{
-        width:90%;
+        width:100%;
     } 
  }  
 
