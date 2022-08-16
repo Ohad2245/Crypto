@@ -5,11 +5,11 @@ import "./footer.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-import bg from '../../assets/footer.jpg';
+// import bg from '../../assets/footer.jpg';
 
 function Footer() {
   return (
-    <div className="footer" style={{backgroundImage: `url(${bg})`}} >
+    <div className="footer">
     <div className="footer__socials">
         <a href="https://www.facebook.com/profile.php?id=100000848391807" target="_blank" rel="noreferrer"
         >

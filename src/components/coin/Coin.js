@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./coin.css";
@@ -21,10 +22,8 @@ function Coin({ name, icon, price, symbol, volume, priceChange , websiteUrl}) {
             <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
           )}
           
-          <a href={websiteUrl} onClick={websiteUrl}>
-            Trade    
-          </a>
-          
+          <a className="btn2" href={websiteUrl} onClick={websiteUrl} target="_blank" >
+          Trade</a>
         </div>
       </div>
     </div>

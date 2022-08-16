@@ -67,6 +67,8 @@
   color: #11d811;
 }
 
+
+
 @media screen and (max-width:600px) { 
     .coin-row{
       flex-direction:column;
