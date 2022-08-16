@@ -9,8 +9,12 @@ const NavBar = () => {
           Home
         </Link>
         <ul>
+        <div className="cryptoHeader">
+      </div>
         <CustomLink to="/coinPage">CoinPage</CustomLink>
         <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/register">Register</CustomLink>
+        <CustomLink to="/login">Login</CustomLink>
         </ul>
       </nav>
     </div>

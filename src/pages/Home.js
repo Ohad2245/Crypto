@@ -5,6 +5,7 @@ import Coin from "../components/coin/Coin";
 import "../App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../redux/coins/coinsSlice";
+ 
 
 function Home() {
   const [listCoins, setListCoins] = useState([]);
@@ -45,8 +46,6 @@ function Home() {
       </small>
       <div className="cryptoHeader">
         <h1>Search Coins</h1>
-
-        <div className="greenPercent"></div>
         <input
           className="search"
           type="text"
