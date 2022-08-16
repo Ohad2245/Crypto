@@ -24,6 +24,7 @@ function Home() {
   const filteredCoins = listCoins.filter((coin) => {
     return coin.name.includes(searchCoin);
   });
+  console.log(listCoins);
 
   // const filteredLevel = listCoins.filter((coin)=>{
   //   if(priceChange < 0)
@@ -60,18 +61,7 @@ function Home() {
         />
       </div>
 
-      <div className="displayUp">
-      {listCoins.map(coin => coin.priceChange > 0 ? (
-          <div>
-            <p className="coin-percent red">{listCoins.priceChange}%</p>
-          </div>
-        ) : (
-          ""
-        )
-        )}
-      </div>
-    
-
+      
       <div className="cryptoDisplay">
         {filteredCoins.map((coin) => {
           return (

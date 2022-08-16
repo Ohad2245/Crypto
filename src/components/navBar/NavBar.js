@@ -11,7 +11,8 @@ const NavBar = () => {
         <ul>
         <div className="cryptoHeader">
       </div>
-        <CustomLink to="/coinPage">CoinPage</CustomLink>
+        <CustomLink to="/upCoins">UpCoins</CustomLink>
+        <CustomLink to="/downCoins">DownCoins</CustomLink>
         <CustomLink to="/about">About</CustomLink>
         <CustomLink to="/register">Register</CustomLink>
         <CustomLink to="/login">Login</CustomLink>
