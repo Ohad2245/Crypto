@@ -11,8 +11,6 @@ body{
     display:flex;
     justify-content:space-between;
     align-items: stretch;
-    gap:1rem;
-    padding:0 1rem;
 }
 
 .site-title{
@@ -35,9 +33,9 @@ body{
     padding:.25rem;
 }
 
-.nav li.active{
+/* .nav li.active{
     background-color:#555;
-}
+} */
 /* .nav li:hover{
     background-color:#777;
 } */
