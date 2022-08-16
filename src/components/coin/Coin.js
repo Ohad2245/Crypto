@@ -21,7 +21,7 @@ function Coin({ name, icon, price, symbol, volume, priceChange , websiteUrl}) {
           ) : (
             <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
           )}
-          
+  
           <a className="btn2" href={websiteUrl} onClick={websiteUrl} target="_blank" >
           Trade</a>
         </div>

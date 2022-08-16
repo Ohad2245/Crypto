@@ -6,8 +6,7 @@ import "../App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../redux/coins/coinsSlice";
  
-
-function Home() {
+function Home(priceChange) {
   const [listCoins, setListCoins] = useState([]);
   const [searchCoin, setSearchCoin] = useState("");
 
@@ -25,6 +24,12 @@ function Home() {
   const filteredCoins = listCoins.filter((coin) => {
     return coin.name.includes(searchCoin);
   });
+
+
+  // const filteredLevel = listCoins.filter((coin)=>{
+  //   if(priceChange < 0) 
+  //       coin.name.includes(searchCoin) && coin.priceChange.includes(setSearchCoin)
+  // });
 
   return (
     <div className="App">
@@ -56,6 +61,14 @@ function Home() {
         />
       </div>
 
+      <div className="displayUp">
+          {listCoins.priceChange > 0 ? (
+            <p className="coin-percent red">{listCoins.priceChange}%</p>
+          ) : (
+            <p className="coin-percent red">{listCoins.priceChange}%</p>
+          )}
+      </div>
+
       <div className="cryptoDisplay">
         {filteredCoins.map((coin) => {
           return (
@@ -69,6 +82,7 @@ function Home() {
               websiteUrl={coin.websiteUrl}
             />
           );
+          
         })}
     </div>
     </div>
