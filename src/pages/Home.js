@@ -8,7 +8,7 @@ import { setCoins } from "../redux/coins/coinsSlice";
 
 function Home() {
   // Wherever I have an setListCoins I deleted.
-  /* I used redax instead of USESTATE throughout the 
+  /* I used redux instead of UseState() throughout the 
   application so that I could get the information of 
   the API call wherever I wanted in the application
   */
