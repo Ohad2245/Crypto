@@ -28,6 +28,7 @@ function Home() {
         dispatch(setCoins(response.data.coins))
       }
     );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filteredCoins = coins.filter((coin) => {
