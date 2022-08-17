@@ -44,7 +44,6 @@ function Home() {
   return (
     <div className="App">
     
-      <div></div>
 
       <h1>Crypto Hunter</h1>
       <small className="p">
