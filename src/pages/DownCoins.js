@@ -31,6 +31,21 @@ function UpCoins() {
         )
         )}
       </div>
+      <h3 className="title">Came Down on the last day</h3>
+      <div className="upDay">
+        <br></br>
+          {listCoins.map((coin) =>
+            coin.priceChange1d < 0 ? (
+              <div>
+                <img className="image" src={coin.icon} width="20" height="20" />
+                <p>{coin.symbol}</p>
+                <p className="coin-percent red">{coin.priceChange1d}%</p>
+              </div>
+            ) : (
+              " "
+            )
+          )}
+        </div>
       </div> 
   );
 }

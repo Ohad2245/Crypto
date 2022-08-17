@@ -18,20 +18,36 @@ function UpCoins() {
 
   return (
     <div className="up">
-    <h1 className="title">The currencies that have risen in the last hour</h1>
+      <h3 className="title">The currencies that have risen in the last hour</h3>
       <div className="displayUp">
-      {listCoins.map(coin => coin.priceChange1h > 0 ? (
-          <div>
-            <img className="image" src={coin.icon} width="20" height="20"/>
-            <p>{coin.symbol}</p>
-            <p className="coin-percent green">{coin.priceChange1h}%</p>
-          </div>
-        ) : (
-          " "
-        )
+        {listCoins.map((coin) =>
+          coin.priceChange1h > 0 ? (
+            <div>
+              <img className="image" src={coin.icon} width="20" height="20" />
+              <p>{coin.symbol}</p>
+              <p className="coin-percent green">{coin.priceChange1h}%</p>
+            </div>
+          ) : (
+            " "
+          )
         )}
       </div>
-      </div> 
+      <h3 className="title">Came up on the last day</h3>
+      <div className="upDay">
+        <br></br>
+          {listCoins.map((coin) =>
+            coin.priceChange1d > 0 ? (
+              <div>
+                <img className="image" src={coin.icon} width="20" height="20" />
+                <p>{coin.symbol}</p>
+                <p className="coin-percent green">{coin.priceChange1d}%</p>
+              </div>
+            ) : (
+              " "
+            )
+          )}
+        </div>
+    </div>
   );
 }
 
