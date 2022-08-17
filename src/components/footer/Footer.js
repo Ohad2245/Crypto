@@ -15,11 +15,11 @@ function Footer() {
   return (
     <div className="footer">
       <Routes className="route">
-        <Route path="/UpCoins" element={<UpCoins />} />
+        <Route path="/upCoins" element={<UpCoins />} />
       </Routes>
 
       <div className="permalinks">
-        <a href="/UpCoins">Up Coins </a>
+        <a href="/upCoins">Up Coins </a>
         <a href="./downCoins">Down Coins</a>
         <a href="./about">Contact</a>
         <a href="./register">Register</a>
