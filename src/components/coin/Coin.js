@@ -29,7 +29,7 @@ function Coin({ name, icon, price, symbol, volume, priceChange, websiteUrl }) {
       <div className="coin-row">
         <div className="coin">
           <img className="image" src={icon} alt="crypto" />
-          <h1>{name}</h1>
+          <h1 className="nameCoin">{name}</h1>
           <p className="coin-symbol">{symbol}</p>
         </div>
         <div className="coin-data">
