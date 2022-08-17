@@ -6,4 +6,5 @@ You can see on the upCoin page - all the coins that have risen in the last hour 
 on the downCoin page-
 the coins that have dropped in the last hour and the last day.
 To start trading you need to register on the registration page and then log in,
-There is full authentication in partnership with Firebase
+There is full authentication in partnership with Firebase.
+I used Redux to access API requests from anywhere in the application.
