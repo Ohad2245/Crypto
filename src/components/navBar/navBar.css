@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 
-.nav{
+.nav__container{
     color:white;
     display:flex;
     justify-content:space-between;
@@ -17,14 +17,14 @@ body{
     font-size: 2rem;
 }
 
-.nav ul{
+.nav__container ul{
     padding:0;
     margin: 0;
     list-style: none;
     display: flex;
     gap:1rem;
 }
-.nav a{
+.nav__container a{
     color:inherit;
     text-decoration: none;
     height:100%;
@@ -33,15 +33,21 @@ body{
     padding:.25rem;
 }
 
-/* .nav li.active{
-    background-color:#555;
-} */
-/* .nav li:hover{
-    background-color:#777;
-} */
-
 .container {
-    margin:1rem;
+    margin:4rem;
     text-align:center;
+
+}
+.ul__nav{
+    margin:1rem;
+
 }
 
+
+@media screen and (max-width:600px) {
+    .nav{
+        height:10vh;
+    }
+    
+
+ } 

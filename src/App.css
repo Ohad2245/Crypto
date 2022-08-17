@@ -49,6 +49,7 @@
     align-content: center;
 }
 .search{
+    font-size: 12px;
     justify-content:center;
     width: 50%;
     height:2.1rem;
@@ -60,20 +61,115 @@
 }
 
 .displayUp{
-    justify-content:center;
     display:flex;
     justify-content:space-between;
-
+    padding:10px;
 }
 
 .displayDown{
-    justify-content:center;
     display:flex;
     justify-content:space-between;
     
 }
 .title{    
     font-weight: 100;
+}
+
+.container.contact__container{
+    width:64%;
+    display: grid;
+    grid-template-columns: 50% 58%;
+    gap:12%;
+}
+
+.contact__options{
+    display:flex;
+    flex-direction:column;
+    gap: 1.2rem;
+}
+
+.contact__option{
+    background:var(--color-bg-variant);
+    padding:1.2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border:1px solid transparent;
+    transition:var(--transition);
+}
+
+.contact__option:hover{
+    background: transparent;
+    border-radius: var(--color-bg-primary-variant);
+}
+
+.contact__option-icon{
+    font-size:1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact__option a{
+    margin-top:0.7rem;
+    display:inline-block;
+    font-size: 0.8rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input,textarea{
+    width:100%;
+    padding:1.5rem;
+    border-radius: 0.5rem;
+    background:transparent;
+    border:2px solid var(--color-bg-primary-variant);
+    resize: none;
+    color:var(--color-white)
+}
+
+/* ================= Media Queries Medium ================= */
+@media screen and (max-width:1024px) {
+    .container.contact__container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .cryptoHeader{
+        width:100%;
+        margin-top:1rem;
+    }
+    .search{
+        width:100%;
+    } 
+}
+
+/* ================= Media Queries Small ================= */
+@media screen and (max-width:600px) { 
+    .container.contact__container{
+        width:var(--container-width-sm);
+    }
+    .displayDown{
+        flex: 1;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+
+
+    }
+    .displayUp{
+        flex: 1;
+        display: flex;
+        justify-content:space-between;
+
+    }
+    .cryptoHeader{
+        width:100%;
+        flex-direction:column;
+    }
+    .search{
+        width:100%;
+    } 
 }
 
  @media screen and (max-width:1024px) {
@@ -86,8 +182,7 @@
     } 
 }
 
-
-@media screen and (max-width:600px) {
+/* @media screen and (max-width:600px) {
     .cryptoHeader{
         width:100%;
         flex-direction:column;
@@ -96,5 +191,4 @@
         width:100%;
     } 
     
- }  
-
+ }  */

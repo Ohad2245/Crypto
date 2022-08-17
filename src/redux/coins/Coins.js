@@ -1,6 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import {increment } from './coinsSlice'
+import { useSelector,} from 'react-redux'
 
 export function Coins() {
   const coins = useSelector(state => state.coins.value)

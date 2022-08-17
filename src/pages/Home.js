@@ -4,10 +4,18 @@ import Axios from "axios";
 import Coin from "../components/coin/Coin";
 import "../App.css";
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "../redux/coins/coinsSlice";
+import { setCoins } from "../redux/coins/coinsSlice";
 
 function Home() {
-  const [listCoins, setListCoins] = useState([]);
+  // Wherever I have an setListCoins I deleted.
+  /* I used redax instead of USESTATE throughout the 
+  application so that I could get the information of 
+  the API call wherever I wanted in the application
+  */
+
+  // And instead of "listCoins" I replaced with "coins"
+
+  // const [listCoins => coins, setListCoins => DELETE!] = useState([]);
   const [searchCoin, setSearchCoin] = useState("");
 
   const coins = useSelector((state) => state.coins.value);
@@ -16,15 +24,16 @@ function Home() {
   useEffect(() => {
     Axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=20").then(
       (response) => {
-        setListCoins(response.data.coins);
+        // setListCoins(response.data.coins);
+        dispatch(setCoins(response.data.coins))
       }
     );
   }, []);
 
-  const filteredCoins = listCoins.filter((coin) => {
+  const filteredCoins = coins.filter((coin) => {
     return coin.name.includes(searchCoin);
   });
-  console.log(listCoins);
+  console.log(coins);
 
   // const filteredLevel = listCoins.filter((coin)=>{
   //   if(priceChange < 0)
@@ -33,16 +42,7 @@ function Home() {
 
   return (
     <div className="App">
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{coins}</span>
-      </div>
-
+    
       <div></div>
 
       <h1>Crypto Hunter</h1>
@@ -61,11 +61,12 @@ function Home() {
         />
       </div>
 
-      
       <div className="cryptoDisplay">
         {filteredCoins.map((coin) => {
           return (
             <Coin
+              key={coin.name}
+            // Put a variable directly so we can access it
               name={coin.name}
               icon={coin.icon}
               price={coin.price}

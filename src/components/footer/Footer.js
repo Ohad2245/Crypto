@@ -23,11 +23,11 @@ function Footer() {
           <BsLinkedin />
         </a>
       </div>
-      <a className="oneBi" href="https://www.one1.co.il/services/bi/" target="_blank" rel="noreferrer">
-        <img src={bg2} width="100"/>
-      </a>
+
       <div className="footer__copyright">
-        <small>&copy; All Rights Reserved by <img src={bg2} width="55"/></small>
+        <small>&copy; All Rights Reserved by <a className="oneBi" href="https://www.one1.co.il/services/bi/" target="_blank" rel="noreferrer">
+        <img src={bg2} width="70"/>
+      </a></small>
       </div>
     </div>
   );

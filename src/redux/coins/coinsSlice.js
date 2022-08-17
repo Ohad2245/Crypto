@@ -1,18 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const coinsSlice = createSlice({
-  name: 'Coins',
+export const CoinsSlice = createSlice({
+  name: 'setCoins',
+  // initialState : Replaces the first state
+  // Enters all the parameters I want
+
   initialState: {
-    value: 0
+    value: [],
   },
   reducers: {
-    incrementByAmount: state => {
-      state.value += 1
-    },
+    setCoins: (state,action) => {
+          state.value = action.payload
+    }
   }
 })
 
-// Action creators are generated for each case reducer function
-export const { increment} = coinsSlice.actions
 
-export default coinsSlice.reducer
+// Action creators are generated for each case reducer function
+export const {setCoins} = CoinsSlice.actions
+
+export default CoinsSlice.reducer
