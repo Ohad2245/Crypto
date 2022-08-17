@@ -34,14 +34,14 @@
     width: 50%;
 }
 
-.permalinks{
+/* .permalinks{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     margin:1.5rem auto 3rem;
     margin-top: -1.5rem;
-}
+} */
 
 @media screen and (max-width:600px) { 
     .footer{

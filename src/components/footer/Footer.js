@@ -1,20 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-// import bg from '../assets/footer-bg.jpg';
-// import bg from '../assets/footer2.png';
 import "./footer.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import bg2 from "../../assets/one.svg";
-import { Route, Routes } from "react-router-dom";
-import UpCoins from "../../pages/DownCoins";
 
 function Footer() {
   return (
     <div className="footer">
-      <Routes className="route">
+      {/* <Routes className="route">
         <Route path="/upCoins" element={<UpCoins />} />
       </Routes>
 
@@ -24,7 +19,8 @@ function Footer() {
         <a href="./about">Contact</a>
         <a href="./register">Register</a>
         <a href="./login">Login</a>
-      </div>
+      </div> */}
+      
 
       <div className="footer__socials">
         <a

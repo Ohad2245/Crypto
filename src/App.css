@@ -1,3 +1,7 @@
+body{
+    overflow-x:hidden;
+}
+
 .App{
     color: #fff;
     font-weight:100;
@@ -17,7 +21,9 @@
     height:80px;
     border-bottom: 1px solid #d7d7d7;
     width:900px;
-
+}
+.map{
+    margin: 10px;
 }
 
 .coin{
@@ -69,8 +75,9 @@
 .displayDown{
     display:flex;
     justify-content:space-between;
-    
+    flex-wrap: wrap;
 }
+
 .title{    
     font-weight: 100;
 }
@@ -155,11 +162,10 @@ input,textarea{
     }
     .displayDown{
         flex: 1;
-        display: flex;
+        /* display: flex; */
         flex-direction:row;
         justify-content:space-between;
-
-
+        display:flex;
     }
     .displayUp{
         flex: 1;
@@ -167,9 +173,11 @@ input,textarea{
         justify-content:space-between;
 
     }
+    
     .cryptoHeader{
         width:100%;
         flex-direction:column;
+
     }
     .search{
         width:100%;
@@ -186,13 +194,3 @@ input,textarea{
     } 
 }
 
-/* @media screen and (max-width:600px) {
-    .cryptoHeader{
-        width:100%;
-        flex-direction:column;
-    }
-    .search{
-        width:100%;
-    } 
-    
- }  */

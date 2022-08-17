@@ -21,7 +21,7 @@ function UpCoins() {
     <h1 className="title">The coins have gone down in the last hour RealTime</h1>
       <div className="displayDown">
       {listCoins.map(coin => coin.priceChange1h < 0 ? (
-          <div>
+          <div className="map">
             <img className="image" src={coin.icon} width="20" height="20"/>
             <p>{coin.symbol}</p>
             <p className="coin-percent red">{coin.priceChange1h}%</p>
@@ -32,11 +32,11 @@ function UpCoins() {
         )}
       </div>
       <h3 className="title">Came Down on the last day</h3>
-      <div className="upDay">
+      <div className="displayDown">
         <br></br>
           {listCoins.map((coin) =>
             coin.priceChange1d < 0 ? (
-              <div>
+              <div className="map">
                 <img className="image" src={coin.icon} width="20" height="20" />
                 <p>{coin.symbol}</p>
                 <p className="coin-percent red">{coin.priceChange1d}%</p>
