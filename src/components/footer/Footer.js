@@ -8,17 +8,23 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import bg2 from "../../assets/one.svg";
+import { Route, Routes } from "react-router-dom";
+import UpCoins from "../../pages/DownCoins";
 
 function Footer() {
   return (
     <div className="footer">
-       <div className="permalinks">
-           <a href='./upCoins'>Up Coins </a>
-           <a href='./downCoins'>Down Coins</a>
-           <a href='./about'>Contact</a>
-           <a href='./register'>Register</a>
-           <a href='./login'>Login</a>
-        </div> 
+      <Routes className="route">
+        <Route path="/UpCoins" element={<UpCoins />} />
+      </Routes>
+
+      <div className="permalinks">
+        <a href="/UpCoins">Up Coins </a>
+        <a href="./downCoins">Down Coins</a>
+        <a href="./about">Contact</a>
+        <a href="./register">Register</a>
+        <a href="./login">Login</a>
+      </div>
 
       <div className="footer__socials">
         <a
