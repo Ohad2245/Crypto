@@ -11,16 +11,14 @@
     display:flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 4rem;
     background: 'black';
 }
 
 .footer__socials a{
     color:DodgerBlue;
-    padding:1rem;
+    padding:2rem;
     border-radius: 0.5rem;
-    display: flex;
-    
+    display: flex;  
 }
 
 .footer__socials a:hover{
@@ -28,16 +26,22 @@
 }
 
 .footer__copyright{
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     text-align: center;
-    background-color:  #152837;
 }
 
 .oneBi{
     width: 50%;
 }
 
-
+.permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin:1.5rem auto 3rem;
+    margin-top: -1.5rem;
+}
 
 @media screen and (max-width:600px) { 
     .footer{
