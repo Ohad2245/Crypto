@@ -13,11 +13,11 @@ function Footer() {
   return (
     <div className="footer">
        <div className="permalinks">
-           <a href='/upCoins'>Up Coins </a>
-           <a href='/downCoins'>Down Coins</a>
-           <a href='/about'>Contact</a>
-           <a href='/register'>Register</a>
-           <a href='/login'>Login</a>
+           <a href='./upCoins'>Up Coins </a>
+           <a href='./downCoins'>Down Coins</a>
+           <a href='./about'>Contact</a>
+           <a href='./register'>Register</a>
+           <a href='./login'>Login</a>
         </div> 
 
       <div className="footer__socials">
