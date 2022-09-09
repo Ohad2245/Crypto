@@ -4,7 +4,6 @@ import "./footer.css";
 import { FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-import bg2 from "../../assets/one.svg";
 
 function Footer() {
   return (
