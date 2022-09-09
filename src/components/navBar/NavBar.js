@@ -19,7 +19,7 @@ const NavBar = () => {
     </div>
   );
 };
-
+// כאשר רציתי שיראו עם צבע על איזה קישור אני עומד
 function CustomLink({ to, children, ...props }) {
 const resolvedPath = useResolvedPath(to);
 const isActive = useMatch({path:resolvedPath.pathname,end:true});

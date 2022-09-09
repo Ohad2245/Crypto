@@ -9,6 +9,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import DownCoins from "./pages/DownCoins";
 
+
 function App() {
   
   return (

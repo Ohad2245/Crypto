@@ -58,14 +58,8 @@ function Footer() {
         </small>
         <small>
           &copy; All Rights Reserved by Ohad{" "}
-          <a
-            className="oneBi"
-            href="https://www.one1.co.il/services/bi/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={bg2} width="70" />
-          </a>
+          
+          
         </small>
       </div>
     </div>

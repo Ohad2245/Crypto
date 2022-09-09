@@ -38,7 +38,6 @@ function Login() {
 
   return (
     <div className="login">
-      <h4>{user?.email}</h4>
 
       <input
         className="loginEmail"
@@ -57,13 +56,12 @@ function Login() {
           setLoginPassword(event.target.value);
         }}
       />
-      <h4>{user?.email}</h4>
       <br></br>
       <button className="btnLogin" onClick={login}>Login</button>
       <br></br>
       <br></br>
       <button className= "signOut" onClick={logout}>Sign Out</button>
-
+      <h5>{user?.email }</h5>
     </div>
 
   );

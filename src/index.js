@@ -11,8 +11,9 @@ import { Provider } from 'react-redux';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <Provider store={store}>
-    <BrowserRouter>
+  /* הפרוביידר נמצא מעל כי הוא עוטף את כל האפליקצייה כדי שנרצה שלכולם תהא גישה*/
+  <Provider store={store}> 
+    <BrowserRouter> 
       <App />
     </BrowserRouter>
   </Provider>

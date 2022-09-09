@@ -21,16 +21,31 @@ function Home() {
   const coins = useSelector((state) => state.coins.value);
   const dispatch = useDispatch();
 
+  // fetch("https://api.coinstats.app/public/v1/coins?skip=0&limit=20")
+  //   .then(res => res.json())
+  //   .then((res) =>{
+  //     dispatch(setCoins(res.data.coins))
+  //   })
+  //   .catch(error => console.log('ERROR'))
+  
+
   useEffect(() => {
     Axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=20").then(
       (response) => {
         // setListCoins(response.data.coins);
         dispatch(setCoins(response.data.coins))
+        // dispatch - הדרך שבה נוכל לבצע את הפעולה הזאת
       }
     );
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /* 
+  מפלטרים את האלמנטים שעומדים בתנאי,התנאי הוא לשמור את כל האלמנטים
+  ברשימה ששם המטבע כולל את מה שכתבתו בשורת החיפוש
+  , אז אנחנו עוקבים אחרי מה שכתבנו באמצעות הווז סטייט של חיפוש
+  inCludes - בודקת האם המילה הזו כלולה או קיימת בתוך קוי נקודה ניים
+  */
   const filteredCoins = coins.filter((coin) => {
     return coin.name.includes(searchCoin);
   });
@@ -43,8 +58,6 @@ function Home() {
 
   return (
     <div className="App">
-    
-
       <h1>Crypto Hunter</h1>
       <small className="p">
         Get All The Info Regarding Your Favorite crypto Currency{" "}

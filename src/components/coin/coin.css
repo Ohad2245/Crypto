@@ -8,7 +8,7 @@
 }
 
 .coin-row {
-  display: flex;
+  display:flex;
   align-items: center;
   height: 80px;
   width: 100%;
@@ -62,15 +62,15 @@
 
 .red {
   color: #f00606;
+  font-weight: 500;
 }
 
 .green {
   color: #11d811;
+  font-weight: 500;
 }
 
-.btn{
-  color: #11d811;
-}
+
 
 .btn2{
   font-weight:700;

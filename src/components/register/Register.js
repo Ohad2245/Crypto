@@ -8,8 +8,10 @@ import {
 import { auth } from '../../firebase-config';
 
 function Register() {
+  // Know what the user wrote
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  // הווז סטטיט יחזירו את המידע של הקלט שהמשתמש כותב
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -17,6 +19,7 @@ function Register() {
 
   const [user, setUser] = useState({});
 
+  // AWAIT - כדי להחזיר הבטחה 
   const register = async () => {
     try {
       const user = await createUserWithEmailAndPassword(

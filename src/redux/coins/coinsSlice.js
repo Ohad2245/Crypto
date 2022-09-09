@@ -1,22 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const CoinsSlice = createSlice({
-  name: 'setCoins',
+  name: 'coins',
   // initialState : Replaces the first state
   // Enters all the parameters I want
+
+  // המסמך שמחזיק את כל הלוגיקה של ה COINS STORE
 
   initialState: {
     value: [],
   },
   reducers: {
     setCoins: (state,action) => {
-          state.value = action.payload
+      state.value = action.payload
+    },
+    setDownCoins: (state,action) =>{
+      state.value = action.payload
+    },
+    setUpCoins: (state,action) =>{
+      state.value = action.payload
     }
   }
 })
 
 
 // Action creators are generated for each case reducer function
-export const {setCoins} = CoinsSlice.actions
+export const {setCoins,setDownCoins,setUpCoins,setSearch} = CoinsSlice.actions
 
 export default CoinsSlice.reducer

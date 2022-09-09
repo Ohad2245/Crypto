@@ -4,25 +4,30 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import "../App.css";
 import React from "react";
+import {setUpCoins} from '../redux/coins/coinsSlice';
+import { useSelector, useDispatch } from "react-redux";
 
 function UpCoins() {
-  const [listCoins, setListCoins] = useState([]);
+  // const [listCoins, setListCoins] = useState([]);
+  const coins = useSelector((state) => state.coins.value);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    Axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=20").then(
+    Axios.get("https://api.coinstats.app/public/v1/coins?skip=0&").then(
       (response) => {
-        setListCoins(response.data.coins);
+        dispatch(setUpCoins(response.data.coins));
       }
     );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="up">
       <h3 className="title">The currencies that have risen in the last hour</h3>
       <div className="displayUp">
-        {listCoins.map((coin) =>
+        {coins.map((coin) =>
           coin.priceChange1h > 0 ? (
-            <div className="map">
+            <div className="map" key ={coin.name}>
               <img className="image" src={coin.icon} width="20" height="20" />
               <p>{coin.symbol}</p>
               <p className="coin-percent green">{coin.priceChange1h}%</p>
@@ -35,10 +40,10 @@ function UpCoins() {
       <h3 className="title">Came up on the last day</h3>
       <div className="displayUp">
         <br></br>
-          {listCoins.map((coin) =>
+          {coins.map((coin) =>
             coin.priceChange1d > 0 ? (
-              <div className="map">
-                <img className="image" src={coin.icon} width="20" height="20" />
+              <div className="map" key ={coin.name} >
+                <img className="image" src={coin.icon} width="20" height="20"/>
                 <p>{coin.symbol}</p>
                 <p className="coin-percent green">{coin.priceChange1d}%</p>
               </div>
