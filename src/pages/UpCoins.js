@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable array-callback-return */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Axios from "axios";
 import "../App.css";
 import React from "react";
