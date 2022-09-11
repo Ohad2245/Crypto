@@ -56,9 +56,12 @@ function Footer() {
           <br></br>
         </small>
         <small>
+        <div style={{color:'gray'}}>
+        <h4>This page was viewed</h4>
+        <h2 id="count">0</h2>
+        <h4>times</h4>
+        </div>
           &copy; All Rights Reserved by Ohad{" "}
-          
-          
         </small>
       </div>
     </div>
