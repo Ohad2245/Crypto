@@ -34,20 +34,14 @@ function Home() {
       (response) => {
         // setListCoins(response.data.coins);
         dispatch(setCoins(response.data.coins))
-        // dispatch - הדרך שבה נוכל לבצע את הפעולה הזאת
       }
     );
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  /* 
-  מפלטרים את האלמנטים שעומדים בתנאי,התנאי הוא לשמור את כל האלמנטים
-  ברשימה ששם המטבע כולל את מה שכתבתו בשורת החיפוש
-  , אז אנחנו עוקבים אחרי מה שכתבנו באמצעות הווז סטייט של חיפוש
-  inCludes - בודקת האם המילה הזו כלולה או קיימת בתוך קוי נקודה ניים
-  */
+  
   const filteredCoins = coins.filter((coin) => {
-    return coin.name.includes(searchCoin);
+    return coin.name.toLowerCase().includes(searchCoin.toLowerCase());
   });
   console.log(coins);
 

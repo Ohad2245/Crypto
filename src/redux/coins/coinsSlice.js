@@ -5,8 +5,6 @@ export const CoinsSlice = createSlice({
   // initialState : Replaces the first state
   // Enters all the parameters I want
 
-  // המסמך שמחזיק את כל הלוגיקה של ה COINS STORE
-
   initialState: {
     value: [],
   },
