@@ -2,20 +2,10 @@ body{
     overflow-x:hidden;
 }
 
-.test h1, h3 ,p{
-    color:white;
-    font-weight:100;
-}
-
-
 .App{
-    color: 'white';
+    color: #fff;
     font-weight:100;
     background-color: #1e3548;
-    /* background-image:url('../src/assets/arrow-down-mint.svg');
-    background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat; */
 }
 
 .coin-container{
