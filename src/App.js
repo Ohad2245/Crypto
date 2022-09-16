@@ -1,6 +1,6 @@
 import "./App.css";
 import NavBar from "./components/navBar/NavBar";
-import UpCoins from "./pages/UpCoins";
+import QA from "./pages/QA";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import {Route , Routes} from 'react-router-dom';
@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import DownCoins from "./pages/DownCoins";
+import Hooks from "./pages/Hook";
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element= {<Home/>} />
-          <Route path="/upCoins" element= {<UpCoins/>} />
+          <Route path="/qa" element= {<QA/>} />
+          <Route path="/hooks" element= {<Hooks/>} />
           <Route path="/downCoins" element= {<DownCoins/>} />
           <Route path="/about" element= {<About/>} />
           <Route path="/login" element= {<Login/>} />

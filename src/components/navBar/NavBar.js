@@ -9,7 +9,8 @@ const NavBar = () => {
           Home
         </Link>
         <ul className="ul__nav">
-        <CustomLink to="/upCoins">UpCoins</CustomLink>
+        <CustomLink to="/qa">QA</CustomLink>
+        <CustomLink to="/hooks">Hooks</CustomLink>
         <CustomLink to="/downCoins">DownCoins</CustomLink>
         <CustomLink to="/about">About</CustomLink>
         <CustomLink to="/register">Register</CustomLink>
