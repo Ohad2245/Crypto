@@ -8,6 +8,7 @@ export const CoinsSlice = createSlice({
   initialState: {
     value: [],
   },
+  
   reducers: {
     setCoins: (state,action) => {
       state.value = action.payload
