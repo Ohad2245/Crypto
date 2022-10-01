@@ -8,8 +8,6 @@ import Footer from "./components/footer/Footer";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import DownCoins from "./pages/DownCoins";
-import AllCoin from "./pages/AllCoin";
-import Header from "./components/header/Header";
 
 function App() {
   
@@ -24,7 +22,6 @@ function App() {
           <Route path="/about" element= {<About/>} />
           <Route path="/login" element= {<Login/>} />
           <Route path="/register" element= {<Register/>} />
-          <Route path="/allCoin" element= {<AllCoin/>} />
         </Routes>
       </div>
       <Footer/>
