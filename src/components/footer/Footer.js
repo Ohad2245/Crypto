@@ -6,8 +6,26 @@ import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
 function Footer() {
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+  
   return (
-    <div className="footer">
+    <div className="footer reveal">
       {/* <Routes className="route">
         <Route path="/upCoins" element={<UpCoins />} />
       </Routes>
@@ -21,7 +39,7 @@ function Footer() {
       </div> */}
       
 
-      <div className="footer__socials">
+      <div className="footer__socials reveal">
         <a
           href="https://www.facebook.com/profile.php?id=100000848391807"
           target="_blank"
@@ -41,7 +59,7 @@ function Footer() {
         </a>
       </div>
 
-      <div className="footer__copyright">
+      <div className="footer__copyright reveal">
         <small>
           We endeavor to publish and maintain accurate information on external
           listings,

@@ -25,12 +25,30 @@ function Coin({ name, icon, price, symbol, volume, priceChange, websiteUrl }) {
     return suffix ? round(volume / pow(1000, base), 2) + suffix : "" + volume;
   }
 
+  function reveal() {
+    let reveals = document.querySelectorAll(".reveal");
+  
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 50;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+  
 
   return (
-    <div className="coin-container">
-      <div className="coin-row">
+    <div className="coin-container reveal">
+      <div className="coin-row" >
         <div className="coin">
-          <img className="image" src={icon} alt="crypto" />
+          <img className="image" src={icon} alt="crypto " />
           <h1 className="nameCoin">{name}</h1>
           <p className="coin-symbol">{symbol}</p>
         </div>
@@ -44,7 +62,7 @@ function Coin({ name, icon, price, symbol, volume, priceChange, websiteUrl }) {
             <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
           )}
 
-          <a className="btn2" href={websiteUrl} target="_blank">
+          <a className="btn2 " href={websiteUrl} target="_blank">
             Trade
           </a>
         </div>

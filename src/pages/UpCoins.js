@@ -52,6 +52,13 @@ function UpCoins() {
             )
           )}
         </div>
+        {/* <div>
+          {coins.map((coin)=>{
+            coin.price > 0 ? (
+
+            )
+          })}
+        </div> */}
     </div>
   );
 }

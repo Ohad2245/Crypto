@@ -1,0 +1,36 @@
+.container{
+    justify-content:center;
+    align-items:center;
+}
+
+.email{
+    margin-top:10;
+    border-radius: 10;
+    padding:10px;
+    margin-bottom: 10px;
+    width:50%;
+}
+
+.password{
+    padding:10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.register{
+    border-radius: 10px;
+    background-color: #0782F9;
+    width: 30%;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: #0782F9;
+}
+
+.logout{
+    border-radius: 10px;
+    background-color: 'white';
+    margin-top: 5;
+    border-color: #0782F9;
+    padding: 15px;
+    width: 30%;
+}
