@@ -2,6 +2,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./coin.css";
+import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretUp } from "react-icons/ai";
 
 function Coin({ name, icon, price, symbol, volume, priceChange, websiteUrl }) {
 
@@ -57,9 +59,9 @@ function Coin({ name, icon, price, symbol, volume, priceChange, websiteUrl }) {
           <p className="coin-volume">{format(volume)}$</p>
 
           {priceChange < 0 ? (
-            <p className="coin-percent red">{priceChange.toFixed(2)}%</p>
+            <p className="coin-percent red"><AiFillCaretDown/>{priceChange.toFixed(2)}%</p>
           ) : (
-            <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
+            <p className="coin-percent green"><AiFillCaretUp/>{priceChange.toFixed(2)}%</p>
           )}
 
           <a className="btn2 " href={websiteUrl} target="_blank">

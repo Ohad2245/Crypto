@@ -2,6 +2,7 @@
 
 body{
     overflow-x:hidden;
+
 }
 
 .App{
@@ -72,7 +73,7 @@ body{
 .search{
     font-size: 12px;
     justify-content:center;
-    width: 50%;
+    width: 30%;
     height:2.1rem;
     align-items: center;
     border: solid 1px gray;
@@ -160,16 +161,13 @@ input,textarea{
 .icons{
     color:rgb(0, 200, 255);
     font-size:15px;
-    text-align: left;
-    align-items: left;
-
 }
 
 .blockP{
+    font-weight: 300;
     align-items: center;
-    justify-content: center;
-    font-weight: 400;
- 
+    justify-content:center;
+    text-align:center;
 }
 
 .p{

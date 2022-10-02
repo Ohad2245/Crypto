@@ -90,19 +90,20 @@ const Home = () => {
       <div className="blockP reveal">
         <span >
           <BsCheckCircleFill className="icons" /> <span className="blue">Join 50m+</span> users buying and
-          selling <span className="blue">250+ cryptocurrencies at true cost</span>
+          selling <span className="blue"> 250+ cryptocurrencies at true cost</span>
         </span>
         <br></br>
         <span>
           <BsCheckCircleFill className="icons" /> Spend with the Crypto.com Visa
-          Card and get up to 5% back
+          Card and <span className="blue"> get up to 5% back</span>
         </span>
         <br></br>
         <span>
-          <BsCheckCircleFill className="icons" /> Grow your portfolio by
-          receiving rewards up to 14.5% on your crypto assets
+          <BsCheckCircleFill className="icons" /> Grow your portfolio by <span className="blue"> receiving rewards up to 14.5% </span>on your crypto assets
         </span>
       </div>
+      <br></br>
+      <br></br>
       <img
         className="phone reveal"
         src={Phone2}
