@@ -8,12 +8,15 @@ import Footer from "./components/footer/Footer";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import DownCoins from "./pages/DownCoins";
+import {makeStyles} from '@material-ui/core';
+import { red } from "@mui/material/colors";
+import Header from "./components/header/Header";
 
 function App() {
   
   return (
     <div className="App">
-      <NavBar />
+      <Header />
       <div className="container">
         <Routes>
           <Route path="/" element= {<Home/>} />

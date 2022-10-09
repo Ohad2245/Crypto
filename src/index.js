@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter} from 'react-router-dom';
 import store from './redux/store';
 import { Provider } from 'react-redux';
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

@@ -8,6 +8,23 @@ import {setUpCoins} from '../redux/coins/coinsSlice';
 import { useSelector, useDispatch } from "react-redux";
 
 function UpCoins() {
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
   // const [listCoins, setListCoins] = useState([]);
   const coins = useSelector((state) => state.coins.value);
   const dispatch = useDispatch();
@@ -27,7 +44,7 @@ function UpCoins() {
       <div className="displayUp">
         {coins.map((coin) =>
           coin.priceChange1h > 0 ? (
-            <div className="map" key ={coin.name}>
+            <div className="map reveal" key ={coin.name}>
               <img className="image" src={coin.icon} width="20" height="20" />
               <p>{coin.symbol}</p>
               <p className="coin-percent green">{coin.priceChange1h}%</p>
@@ -42,7 +59,7 @@ function UpCoins() {
         <br></br>
           {coins.map((coin) =>
             coin.priceChange1d > 0 ? (
-              <div className="map" key ={coin.name} >
+              <div className="map reveal" key ={coin.name} >
                 <img className="image" src={coin.icon} width="20" height="20"/>
                 <p>{coin.symbol}</p>
                 <p className="coin-percent green">{coin.priceChange1d}%</p>

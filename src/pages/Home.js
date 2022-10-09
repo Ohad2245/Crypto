@@ -12,6 +12,8 @@ import Header from "../components/header/Header";
 import { BsCheckCircleFill } from "react-icons/bs";
 import Phone2 from "../assets/Phone2.png";
 import Picture from "../components/pucture/Picture";
+import Banner from "../components/banner/Banner";
+
 const Home = () => {
 
   const [visible,setVisible] = useState(10);
@@ -82,7 +84,8 @@ const Home = () => {
 
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
+      <Banner/>
       <p className="p reveal">
         The World’s Fastest Growing <br />
         Crypto App
