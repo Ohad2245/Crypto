@@ -1,5 +1,4 @@
 import "./App.css";
-import NavBar from "./components/navBar/NavBar";
 import UpCoins from "./pages/UpCoins";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -8,8 +7,6 @@ import Footer from "./components/footer/Footer";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import DownCoins from "./pages/DownCoins";
-import {makeStyles} from '@material-ui/core';
-import { red } from "@mui/material/colors";
 import Header from "./components/header/Header";
 
 function App() {

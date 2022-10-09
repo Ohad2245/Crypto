@@ -5,7 +5,6 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { makeStyles } from "@material-ui/core";
-import { Link } from "@mui/material";
 
 function Carousel() {
   const [listCoins, setListCoins] = useState([]);

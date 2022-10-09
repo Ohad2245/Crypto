@@ -8,7 +8,6 @@ import Coin from "../components/coin/Coin";
 import "../App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { setCoins } from "../redux/coins/coinsSlice";
-import Header from "../components/header/Header";
 import { BsCheckCircleFill } from "react-icons/bs";
 import Phone2 from "../assets/Phone2.png";
 import Picture from "../components/pucture/Picture";
