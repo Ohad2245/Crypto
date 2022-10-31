@@ -3,16 +3,14 @@ import { auth } from "../../firebase-config";
 import { Box } from "@mui/system";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { CryptoState } from "../../CryptoContext";
-import { Button, TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { FormControlLabel } from "@mui/material";
 
 function Register({ handleClose }) {
   // Know what the user wrote
