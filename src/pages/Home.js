@@ -12,6 +12,7 @@ import { BsCheckCircleFill } from "react-icons/bs";
 import Phone2 from "../assets/Phone2.png";
 import Picture from "../components/pucture/Picture";
 import Banner from "../components/banner/Banner";
+import Contact from "../components/contact/Contact";
 
 const Home = () => {
 
@@ -147,6 +148,7 @@ const Home = () => {
         </button>
       </div>
       <Picture/>
+      <Contact/>
     </div>
   );
 };

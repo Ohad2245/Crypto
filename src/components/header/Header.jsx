@@ -29,8 +29,6 @@ function Header() {
               <ul className="ul__nav">
                 <Link to="/upCoins">Up Coins</Link>
                 <Link to="/downCoins">Down Coins</Link>
-                <Link to="/about">Contact</Link>
-
               </ul>
             </nav>
           </div>

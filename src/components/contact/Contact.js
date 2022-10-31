@@ -4,7 +4,7 @@ import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp} from 'react-icons/bs'
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
-import '../App.css';
+import './contact.css';
 
 function About() {
   const form = useRef();
@@ -18,7 +18,7 @@ function About() {
   };
 
   return (
-    <div>
+    <div className="text">
       <p>The purpose of this website is solely to display information regarding the products and services available on the Crypto.com App. 
       <br></br>It is not intended to offer access to any of such products and services.
       <br></br> You may obtain access to such products and services on the Crypto.com App.
