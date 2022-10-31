@@ -23,7 +23,7 @@ function About() {
   };
 
   return (
-    <div>
+    <div className="all">
       <div className="container_text">
         <p className="text">
           The purpose of this website is solely to display information regarding

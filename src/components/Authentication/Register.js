@@ -1,17 +1,49 @@
 import React, { useState } from "react";
 import { auth } from "../../firebase-config";
 import { Box } from "@mui/system";
-import { Button, TextField } from "@material-ui/core";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { CryptoState } from '../../CryptoContext';
+import { CryptoState } from "../../CryptoContext";
+import { Button, TextField } from "@material-ui/core";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { FormControlLabel } from "@mui/material";
 
-function Register({ handleClose}) {
+function Register({ handleClose }) {
   // Know what the user wrote
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const { setAlert } = CryptoState();
+
+  const [values, setValues] = React.useState({
+    amount: "",
+    password: "",
+    weight: "",
+    weightRange: "",
+    showPassword: false,
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
 
   const handleSubmit = async () => {
     if (password !== confirmPassword) {
@@ -45,7 +77,6 @@ function Register({ handleClose}) {
     }
   };
 
- 
   return (
     <Box
       p={3}
@@ -55,30 +86,64 @@ function Register({ handleClose}) {
         gap: "20px",
       }}
     >
-      <TextField
-        variant="outlined"
-        type="email"
-        label="Enter Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        fullWidth
-      />
-      <TextField
-        variant="outlined"
-        label="Enter Password"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        fullWidth
-      />
-      <TextField
+      <FormControl variant="outlined">
+        <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
+        <OutlinedInput
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          label="Email"
+        />
+      </FormControl>
+
+      <FormControl variant="outlined">
+        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+        <OutlinedInput
+          variant="outlined"
+          label="Password"
+          type={values.showPassword ? "text" : "password"}
+          value={values.confirmPassword}
+          onChange={(e) => setPassword(e.target.value)}
+          endAdornment={
+          <InputAdornment position="end">
+            <IconButton
+              aria-label="toggle password visibility"
+              onClick={handleClickShowPassword}
+              onMouseDown={handleMouseDownPassword}
+              edge="end"
+              
+            >
+              {values.showPassword ? <VisibilityOff /> : <Visibility />}
+            </IconButton>
+          </InputAdornment>
+        }
+        />
+      </FormControl>
+
+      <FormControl variant="outlined">
+      <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
+        <OutlinedInput
         variant="outlined"
         label="Confirm Password"
-        type="password"
-        value={confirmPassword}
+        type={values.showPassword ? "text" : "password"}
+        value={values.confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
-        fullWidth
+        endAdornment={
+          <InputAdornment position="end">
+            <IconButton
+              aria-label="toggle password visibility"
+              onClick={handleClickShowPassword}
+              onMouseDown={handleMouseDownPassword}
+              edge="end"
+              
+            >
+              {values.showPassword ? <VisibilityOff /> : <Visibility />}
+            </IconButton>
+          </InputAdornment>
+        }
       />
+      </FormControl>
+
       <Button
         variant="contained"
         size="large"
@@ -87,7 +152,6 @@ function Register({ handleClose}) {
       >
         Register
       </Button>
-    
     </Box>
   );
 }

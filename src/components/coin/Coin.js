@@ -4,6 +4,7 @@ import React from "react";
 import "./coin.css";
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiFillCaretUp } from "react-icons/ai";
+import CoinInfo from "../CoinInfo";
 
 function Coin({ name, icon, price, symbol, volume, priceChange, websiteUrl }) {
 
@@ -64,6 +65,7 @@ function Coin({ name, icon, price, symbol, volume, priceChange, websiteUrl }) {
             <p className="coin-percent green"><AiFillCaretUp/>{priceChange.toFixed(2)}%</p>
           )}
 
+          <CoinInfo />
           <a className="btn2 " href={websiteUrl} target="_blank">
             Trade
           </a>

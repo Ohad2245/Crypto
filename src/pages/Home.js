@@ -13,6 +13,7 @@ import Phone2 from "../assets/Phone2.png";
 import Picture from "../components/pucture/Picture";
 import Banner from "../components/banner/Banner";
 import Contact from "../components/contact/Contact";
+import CoinInfo from "../components/CoinInfo";
 
 const Home = () => {
 
@@ -150,6 +151,7 @@ const Home = () => {
       </div>
       <Picture/>
       <Contact/>
+
     </div>
   );
 };

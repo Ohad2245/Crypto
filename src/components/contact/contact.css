@@ -1,3 +1,12 @@
+.all{
+  /* background-image:url('../../assets/hd-wallpaper-1646788_1920.jpg'); */
+  height: 100%; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
 .container.contact__container {
   width: 64%;
   display: grid;
