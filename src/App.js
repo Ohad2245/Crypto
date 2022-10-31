@@ -4,10 +4,9 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import {Route , Routes} from 'react-router-dom';
 import Footer from "./components/footer/Footer";
-import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
 import DownCoins from "./pages/DownCoins";
 import Header from "./components/header/Header";
+import Alert from "./components/Alert";
 
 function App() {
   
@@ -20,10 +19,9 @@ function App() {
           <Route path="/upCoins" element= {<UpCoins/>} />
           <Route path="/downCoins" element= {<DownCoins/>} />
           <Route path="/about" element= {<About/>} />
-          <Route path="/login" element= {<Login/>} />
-          <Route path="/register" element= {<Register/>} />
         </Routes>
       </div>
+      <Alert/>
       <Footer/>
     </div>
   );

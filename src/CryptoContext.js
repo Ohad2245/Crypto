@@ -1,18 +1,33 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { useEffect } from "react";
+import { createContext, useContext, useState } from "react";
+import { auth } from "./firebase-config";
 
 const Crypto = createContext();
 
 const CryptoContext = ({ children }) => {
-  const [currency, setCurrency] = useState("INR");
-  const [symbol, setSymbol] = useState("₹");
+  const [user, setUser] = useState(null);
+
+  const [alert, setAlert] = useState({
+    open: false,
+    message: "",
+    type: "success",
+  });
 
   useEffect(() => {
-    if (currency === "INR") setSymbol("₹");
-    else if (currency === "USD") setSymbol("$");
-  }, [currency]);
-
+    onAuthStateChanged(auth, (user) => {
+      if (user) setUser(user);
+      else setUser(null);
+    });
+  }, []);
   return (
-    <Crypto.Provider value={{ currency, setCurrency, symbol }}>
+    <Crypto.Provider
+      value={{
+        alert,
+        setAlert,
+        user,
+      }}
+    >
       {children}
     </Crypto.Provider>
   );
