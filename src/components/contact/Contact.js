@@ -13,7 +13,7 @@ function About() {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_uama4xr",
+      "service_rsz4p62",
       "template_kf8z3kc",
       form.current,
       "KQZ1FUigy-wCZY0js"
