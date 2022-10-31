@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React ,{useEffect,useState} from 'react';
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -38,7 +39,6 @@ const CoinInfo =() => {
         if(!response){
           return <div>Loading...</div>
         }
-        const coinChartData = response.coinInfo.map(value => ({ x: value[0], y: value[1].toFixed(2) }));
       } 
     )
   },[]);
