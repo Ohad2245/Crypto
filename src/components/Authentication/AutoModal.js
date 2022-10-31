@@ -65,10 +65,8 @@ function AuthModal() {
       });
   };
 
-
-
   return (
-    <div className="header">
+    <div>
       <Button onClick={handleOpen} style={{backgroundColor:'#EEBC1D',color:'black'}}>
         Login
       </Button>

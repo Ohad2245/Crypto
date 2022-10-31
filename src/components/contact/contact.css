@@ -41,11 +41,18 @@ form {
   flex-direction: column;
   gap: 1.2rem;
 }
+
 .text{
-    font-family: monospace;
-    display: inline-block;
-    text-align: center;
+  font-family: monospace;
+  text-align: justify;
+  width: 50%;
 }
+.container_text{
+  display:flex;
+ justify-content: center;
+ align-items: center;
+}
+
 input,
 textarea {
   width: 100%;
@@ -61,6 +68,11 @@ textarea {
   .container.contact__container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .text{
+    font-family: monospace;
+    text-align: justify;
+    width: 100%;
   }
 }
 

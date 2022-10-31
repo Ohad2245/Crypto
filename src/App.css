@@ -108,14 +108,19 @@ body{
 .icons{
     color:rgb(0, 200, 255);
     font-size:15px;
+    font-family: monospace;
+    justify-content: center;
+    align-items: center;
 }
 
 .blockP{
     font-weight: 300;
-    align-items: center;
-    justify-content:center;
-    text-align:center;
+    text-align: center;
+    justify-content: center;
+
+
 }
+
 
 .p{
     font-size: 70px;
@@ -140,7 +145,7 @@ body{
     -webkit-justify-content: center;
     justify-content: center;
     border-radius: 4px;
-    border-color: #F4F4F4;
+    border-color: rgb(0, 170, 255);
     background-color: transparent;
     color: white;
 
@@ -164,7 +169,9 @@ body{
   .blue{
     color:rgb(0, 170, 255);
     font-weight: 500;
+    
   }
+
 
 /* ================= Media Queries Medium ================= */
 @media screen and (max-width:1024px) {

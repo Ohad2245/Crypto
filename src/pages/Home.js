@@ -90,8 +90,9 @@ const Home = () => {
         The World’s Fastest Growing <br />
         Crypto App
       </p>
+
       <div className="blockP reveal">
-        <span >
+        <span>
           <BsCheckCircleFill className="icons" /> <span className="blue">Join 50m+</span> users buying and
           selling <span className="blue"> 250+ cryptocurrencies at true cost</span>
         </span>

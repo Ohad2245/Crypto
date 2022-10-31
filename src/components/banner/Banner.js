@@ -40,6 +40,7 @@ function Banner() {
               fontWeight: "bold",
               marginBottom: 15,
               fontFamily: "Times New Roman",
+              color:'gold'
             }}
           >
             Crypto Hunter
@@ -47,9 +48,11 @@ function Banner() {
           <Typography
             variant="subtitle2"
             style={{
-              color: "darkgrey",
+              color: 'rgb(0, 170, 255)',
               textTransform: "capitalize",
               fontFamily: "Montserrat",
+              fontWeight: "bold",
+
             }}
           >
             Get all the Info regarding your favorite Crypto Currency

@@ -46,14 +46,17 @@ body{
   align-items: center;
   padding:.25rem;
 }
+.nav__container a:hover{
+  color:gray;
+}
 
 .container {
-  margin:4rem;
   text-align:center;
 
 }
 .ul__nav{
-  margin:1rem;
+  font-family: monospace;
+  
 }
 
 

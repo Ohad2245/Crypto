@@ -27,8 +27,8 @@ function Header() {
           <div>
             <nav className="nav__container">
               <ul className="ul__nav">
-                <Link to="/upCoins">Up Coins</Link>
-                <Link to="/downCoins">Down Coins</Link>
+                <Link to="/upCoins">Up-Coins</Link>
+                <Link to="/downCoins">Down-Coins</Link>
               </ul>
             </nav>
           </div>

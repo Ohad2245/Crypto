@@ -3,8 +3,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-
- 
 }
 .paper{
     color:gold;
@@ -30,6 +28,5 @@
     gap: 20px;
     font-size:20;
 }
-.login{
-    background-color:red;
-}
+
+

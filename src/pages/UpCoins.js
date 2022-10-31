@@ -44,7 +44,7 @@ function UpCoins() {
       <div className="displayUp">
         {coins.map((coin) =>
           coin.priceChange1h > 0 ? (
-            <div className="map reveal" key ={coin.name}>
+            <div className="map " key ={coin.name}>
               <img className="image" src={coin.icon} width="20" height="20" />
               <p>{coin.symbol}</p>
               <p className="coin-percent green">{coin.priceChange1h}%</p>
@@ -59,7 +59,7 @@ function UpCoins() {
         <br></br>
           {coins.map((coin) =>
             coin.priceChange1d > 0 ? (
-              <div className="map reveal" key ={coin.name} >
+              <div className="map" key ={coin.name} >
                 <img className="image" src={coin.icon} width="20" height="20"/>
                 <p>{coin.symbol}</p>
                 <p className="coin-percent green">{coin.priceChange1d}%</p>
