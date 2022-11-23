@@ -2,13 +2,19 @@
 
 body{
     overflow-x:hidden;
-    
 }
 
 .App{
     color: #fff;
     font-weight:100;
     background-color: #061121;
+    align-items: center;
+    text-align: center;
+}
+
+.container2{
+    margin:0;
+    padding:0;
 }
 
 .coin-container{
@@ -118,23 +124,22 @@ body{
     text-align: center;
     justify-content: center;
 
-
 }
-
 
 .p{
     font-size: 70px;
     font-weight: 500;
+    color:rgb(0, 200, 255);
 }
 
 .bt{
     cursor: pointer;
-    /* font-family: Acumin Pro,acumin-pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; */
+    font-family: Acumin Pro,acumin-pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
     font-size: 17px;
     letter-spacing: 0.02em;
     font-weight: 600;
-    padding-left: 24px;
-    padding-right: 24px;
+     padding-left: 24px; 
+     padding-right: 24px; 
     height: 58px;
     border-width: 1px;
     border-style: solid;
@@ -171,7 +176,13 @@ body{
     font-weight: 500;
     
   }
-
+  
+  .lockIcon{
+    color:black;
+    align-items: center;
+    width:100%;
+    height:30px;
+  }
 
 /* ================= Media Queries Medium ================= */
 @media screen and (max-width:1024px) {
@@ -195,7 +206,7 @@ body{
     }
     .displayDown{
         flex: 1;
-        /* display: flex; */
+        display: flex;
         flex-direction:row;
         justify-content:space-between;
         display:flex;
@@ -215,6 +226,10 @@ body{
     .search{
         width:100%;
     } 
+    .p{
+        font-size: 60px;
+        font-weight: 400; 
+    }
 }
 
  @media screen and (max-width:1024px) {

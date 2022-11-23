@@ -12,13 +12,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="container">
+      <div className="container2">
         <Routes>
           <Route path="/" element= {<Home/>} />
           <Route path="/upCoins" element= {<UpCoins/>} />
           <Route path="/downCoins" element= {<DownCoins/>} />
-        </Routes>
-      </div>
+        </Routes> 
+        </div>
       <Alert/>
       <Footer/>
     </div>

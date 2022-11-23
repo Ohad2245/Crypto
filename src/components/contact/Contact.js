@@ -26,6 +26,8 @@ function About() {
     <div className="all">
       <div className="container_text">
         <p className="text">
+        <br></br>
+        <br></br>
           The purpose of this website is solely to display information regarding
           the products and services available on the Crypto.com App. It is not
           intended to offer access to any of such products and services. You may

@@ -15,6 +15,7 @@ import { CryptoState } from "../../CryptoContext";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { FormControlLabel } from "@mui/material";
+import {AiFillUnlock} from 'react-icons/ai';
 
 function Login({ handleClose }) {
   // Know what the user wrote
@@ -98,6 +99,7 @@ function Login({ handleClose }) {
         color: "white",
       }}
     >
+      <AiFillUnlock className="lockIcon"/>
       <FormControl variant="outlined">
         <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
         <OutlinedInput
@@ -134,7 +136,6 @@ function Login({ handleClose }) {
         }
         />
       </FormControl>
-
       <Button
         variant="contained"
         size="large"

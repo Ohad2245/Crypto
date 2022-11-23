@@ -1,39 +1,37 @@
-import { Container, makeStyles, Typography } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 import Carousel from "./Carousel";
+import './banner.css';
 
-const useStyles = makeStyles((theme) => ({
-  banner: {
-    backgroundImage: 'url(analytics-3088958_1920.jpg)',
-
-  },
-  bannerContent: {
-    height: 400,
-    display: "flex",
-    flexDirection: "column",
-    paddingTop: 25,
-    justifyContent: "space-around",
-  },
-  tagline: {
-    display: "flex",
-    height: "40%",
-    flexDirection: "column",
-    justifyContent: "center",
-    textAlign: "center",
-  },
-  carousel: {
-    height: "50%",
-    display: "flex",
-    alignItems: "center",
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+ 
+//   bannerContent: {
+//     height: 400,
+//     display: "flex",
+//     flexDirection: "column",
+//     paddingTop: 25,
+//     justifyContent: "space-around",
+//   },
+//   tagline: {
+//     display: "flex",
+//     height: "40%",
+//     flexDirection: "column",
+//     justifyContent: "center",
+//     textAlign: "center",
+//   },
+//   carousel: {
+//     height: "50%",
+//     display: "flex",
+//     alignItems: "center",
+//   },
+// }));
 
 function Banner() {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-    <div className={classes.banner}>
-      <Container className={classes.bannerContent}>
-        <div className={classes.tagline}>
+    <div className="banner">
+      <Container className="bannerContent">
+        <div className="tagline">
           <Typography
             variant="h2"
             style={{

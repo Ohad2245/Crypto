@@ -1,10 +1,8 @@
 .all{
-  /* background-image:url('../../assets/hd-wallpaper-1646788_1920.jpg'); */
   height: 100%; 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-
 }
 
 .container.contact__container {
@@ -80,8 +78,8 @@ textarea {
   }
   .text{
     font-family: monospace;
-    text-align: justify;
-    width: 100%;
+    text-align: center;
+    width: 95%;
   }
 }
 

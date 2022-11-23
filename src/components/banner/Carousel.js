@@ -20,7 +20,7 @@ function Carousel() {
       alignItems: "center",
       cursor: "pointer",
       textTransform: "uppercase",
-      color:'gold'
+      color:'white'
 
     },
   }));
@@ -37,10 +37,10 @@ function Carousel() {
 
   const responsive = {
     0: {
-      items: 2,
+      items: 3,
     },
     512: {
-      items: 4,
+      items: 5,
     },
   };
    function numberWithCommas(x) {

@@ -11,6 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import {AiFillLock} from 'react-icons/ai';
 
 function Register({ handleClose }) {
   // Know what the user wrote
@@ -81,6 +82,8 @@ function Register({ handleClose }) {
         gap: "20px",
       }}
     >
+     <AiFillLock className="lockIcon"/>
+
       <FormControl variant="outlined">
         <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
         <OutlinedInput
